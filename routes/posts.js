@@ -4,7 +4,8 @@ const router = express.Router()
 let checkLogin = require('../middlewares/check').checkLogin
 
 router.get('/', (req, res, next)=>{
-    res.send(req.flash())
+    // res.send('1111111')
+    res.render('posts')
 })
 
 router.post('/', checkLogin, (req, res, next)=>{
